@@ -1,0 +1,132 @@
+.containerf {
+  width: 90vw;
+  max-width: 56.25rem;
+  margin: auto;
+  margin-top: min(1.5rem, 5vw);
+
+  // @media (min-width: $desktop) {
+  //   grid-template-columns: 22.5rem 1fr;
+  // }
+}
+
+.article {
+  font-size: 18px;
+  display: grid;
+}
+
+p {
+  font-size: 2em; /* sets font size = 36px */
+}
+
+// article {
+//   display: grid;
+//   margin-top: min(1.5rem, 5vw);
+
+//   @media (min-width: $desktop) {
+//     grid-template-columns: 22.5rem 1fr;
+//   }
+// }
+
+.img-container {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  z-index: 1;
+  height: min(15rem, 60vw);
+  width: 100%;
+  background-image: var(--mobile-illustration1), var(--mobile-illustration2);
+  background-repeat: no-repeat;
+  background-size: auto 85%, auto 50%;
+  background-position: 50% 0%, 50% 100%;
+}
+
+.faq {
+  grid-row: 2 / span 2;
+  grid-column: 1;
+  // margin-top: min(1.5rem, 5vw);
+  padding: min(7.5rem, 30vw) 1.5rem 2.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 0.62rem 1.87rem hsla(0, 0%, 0%, 0.2);
+}
+
+h2 {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1.2em 0;
+  // @media (min-width: $desktop) {
+  //   text-align: left;
+  //   margin: 0 0 1.65em 0;
+  // }
+}
+
+.q-a {
+  font-size: 0.95rem;
+  border-bottom: 1.5px solid var(--light-grayish-blue);
+  padding-bottom: 1.05em;
+  margin-top: 1.05em;
+}
+
+.q-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.q-wrapper h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  grid-column: 1;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+
+  &:hover {
+    // color: var(--soft-red);
+    color: red;
+  }
+
+  &.h2-active {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+  }
+}
+
+// h3 {
+//   grid-column: 1;
+//   color: var(--very-dark-grayish-blue);
+//   cursor: pointer;
+
+//   &:hover {
+//     // color: var(--soft-red);
+//     color: red;
+//   }
+
+//   &.h3-active {
+//     color: var(--very-dark-blue);
+//     font-weight: 700;
+//   }
+// }
+
+svg {
+  grid-column: 2;
+  padding: -1.5rem 0 0 0.7rem;
+  justify-self: end;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &.svg-animation {
+    transform: rotate(180deg);
+    padding: 0 0.7rem 0.5rem 0;
+  }
+}
+
+p {
+  // Arrow icon -> width: __10px__, left padding: __0.7rem__
+  width: calc(100% - calc(10px + 0.7rem));
+  color: var(--dark-grayish-blue);
+  margin-top: 1.05em;
+
+  &.p-visible {
+    display: block;
+  }
+}

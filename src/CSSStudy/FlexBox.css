@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.wrapperabs {
+  display: flex;
+  padding-top: 60px;
+  flex-direction: column-reverse;
+}
+.collapsible {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsibleabs {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsible input {
+  display: none;
+}
+
+.collapsibleabs input {
+  display: none;
+}
+
+.collapsible label {
+  position: relative;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0);
+  color: #1c1c6b;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.collapsibleabs label {
+  position: relative;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0);
+  color: #1c1c6b;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.collapsible label::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+.collapsibleabs label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 25px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.5s ease;
+}
+
+.collapsible input:checked label::after {
+  transform: rotate(90deg);
+}
+
+.collapsibleabs input:checked label::after {
+  transform: rotate(90deg);
+}
+
+.collapsible-text {
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.collapsibleabs-text {
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+  max-height: 300px;
+  padding-bottom: 25px;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  top: 0;
+}
+
+.collapsibleabs input:checked ~ .collapsibleabs-text {
+  max-height: 300px;
+  padding-bottom: 35px;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  top: 0;
+}
+
+.collapsible-text h5 {
+  margin-bottom: 10px;
+  padding: 15px 15px 0;
+  color: #1c1c6b;
+}
+
+.collapsibleabs-text h5 {
+  margin-bottom: 10px;
+  padding: 15px 25px 0;
+  color: #1c1c6b;
+}
+
+.collapsible-text .collapsible-text p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.collapsibleabs-text .collapsibleabs-text div {
+  padding-left: 19px;
+  padding-right: 25px;
+}
+.image {
+  padding-left: 268px;
+  margin-top: -19px;
+}
+
+/*  */
+
+.containerfb {
+  border: 0px solid black;
+  display: flex;
+  flex-direction: column-reverse;
+  width: fit-content;
+}
+
+.containerfb1 {
+  border: 4px solid black;
+  display: inline-flex;
+}
+
+.containerfb2 {
+  border: 4px solid black;
+  display: inline;
+}
+
+.containerfb3 {
+  border: 4px solid black;
+  display: inline-block;
+}
+
+.containerfb4 {
+  border: 4px solid black;
+  display: inline-flexbox;
+}
+
+.containerfb5 {
+  border: 4px solid black;
+  display: inline-table;
+}
+
+.containerfb6 {
+  border: 4px solid black;
+  display: block;
+}
+
+.containerfb7 {
+  border: 4px solid black;
+  display: flexbox;
+}
+
+.containerfb8 {
+  border: 4px solid black;
+  display: block;
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+}
+
+.flex-item {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: #d5ea9a;
+}
+.item-2 {
+  background-color: #ea9a9a;
+}
+.item-3 {
+  background-color: #9aeadee1;
+}
+.item-4 {
+  background-color: #9abdea;
+}
+.item-5 {
+  background-color: #9f9aea;
+}
+.item-6 {
+  background-color: #b19aea;
+}
+.item-7 {
+  background-color: #e19aea;
+}
+.item-8 {
+  background-color: #a67f8b;
+}
+.item-9 {
+  background-color: #c4c9b7;
+}
+
+.wrapperr {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.collapsiblee {
+  max-width: 450px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.cflex {
+  width: 90vw;
+  max-width: 56.25rem;
+  margin: auto;
+  border: none;
+}
+
+.absunit {
+  border: 2px solid black;
+  width: 300px;
+}
+
+.absunit p {
+  font-size: 12px;
+}
